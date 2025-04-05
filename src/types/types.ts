@@ -1,4 +1,4 @@
-export interface RopaItem {
+export interface SectionItem {
   titulo: string;
   subitem: string[];
 }
