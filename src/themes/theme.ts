@@ -7,7 +7,7 @@ export const theme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          fontSize: "1.3rem",
+          fontSize: "0.8rem",
           lineHeight: 1.6,
           color: "#ffffff",
           marginBottom: "0.2rem",
@@ -22,7 +22,7 @@ export const theme = createTheme({
             fontWeight: 300,
             color: "#ffffff",
             marginBottom: "0.5rem",
-            fontFamily: "fantasy",
+            fontFamily: "serif",
           },
         },
         {
@@ -31,6 +31,16 @@ export const theme = createTheme({
             fontSize: "1.0rem",
             fontWeight: 200,
             color: "#ffffff",
+            marginBottom: "0.5rem",
+            fontFamily: "fantasy",
+          },
+        },
+        {
+          props: { variant: "h2" },
+          style: {
+            fontSize: "1.0rem",
+            fontWeight: 200,
+            color: "#141111",
             marginBottom: "0.5rem",
             fontFamily: "fantasy",
           },

@@ -1,9 +1,21 @@
 "use client";
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import React, { useEffect } from "react";
+import { Box } from "@mui/material";
 import { ProductList } from "@/components/Products/ProductList";
+import { useUrbanStore } from "../../hooks/useUrbanStore";
+import { useStore } from "../../store/useStore";
 
 export default function Ropa() {
+  const { getOfertaLogua } = useUrbanStore();
+  const { setProducto } = useStore();
+  useEffect(() => {
+    const getUrbanProducts = async () => {
+      const response = await getOfertaLogua();
+      setProducto(response);
+    };
+    getUrbanProducts();
+  }, []);
+
   return (
     <Box>
       <ProductList />

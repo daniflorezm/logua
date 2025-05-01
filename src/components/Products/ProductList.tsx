@@ -1,28 +1,22 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import { ProductCard } from "./ProductCard";
+import { useStore } from "../../store/useStore";
 
 export const ProductList = () => {
-  const products = [
-    { title: "Producto 1" },
-    { title: "Producto 2" },
-    { title: "Producto 3" },
-    { title: "Producto 4" },
-    { title: "Producto 5" },
-    { title: "Producto 6" },
-    { title: "Producto 7" },
-    { title: "Producto 8" },
-    { title: "Producto 9" },
-    { title: "Producto 10" },
-    { title: "Producto 10" },
-  ];
+  const { producto } = useStore();
+  console.log("Producto", producto);
 
   return (
     <Container maxWidth="lg" sx={{ padding: 2 }}>
       <Grid container spacing={4}>
-        {products.map((product, index) => (
-          <Grid key={index} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
-            <ProductCard title={product.title} />
+        {producto.map((product, index) => (
+          <Grid key={index} size={{ xs: 6, sm: 3, md: 3, lg: 3 }}>
+            <ProductCard
+              title={product.oferta}
+              image_1={product.imagen_1}
+              image_2={product.imagen_2}
+            />
           </Grid>
         ))}
       </Grid>

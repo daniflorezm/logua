@@ -3,7 +3,7 @@ import React from "react";
 import { theme } from "@/themes/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import Box from "@mui/material/Box";
+import { Box } from "@mui/material";
 import { ItemsLogua } from "@/components/Items/ItemsLogua";
 import { SectionItem } from "@/types/types";
 export default function RootLayout({
@@ -21,7 +21,6 @@ export default function RootLayout({
   };
   const tecnoLoguaItem: SectionItem = {
     titulo: "Tecno Logua",
-    subitem: ["Todo", "Perfumes", "Relojes", "Otros productos"],
   };
   const servicesItem: SectionItem = {
     titulo: "Otros servicios",
@@ -43,30 +42,27 @@ export default function RootLayout({
                 justifyContent={"space-evenly"}
                 p={1}
                 sx={{
-                  backgroundColor: "#b22222",
+                  backgroundColor: "#a20000",
                 }}
+                flexWrap="wrap-reverse"
               >
+                <ItemsLogua
+                  title={servicesItem.titulo}
+                  subtitle={servicesItem.subitem}
+                  path="/services"
+                />
                 <ItemsLogua
                   title={barberLoguaItem.titulo}
                   subtitle={barberLoguaItem.subitem}
                   path="/barberlogua"
                 />
+                <ItemsLogua title={tecnoLoguaItem.titulo} path="/tecnologua" />
                 <ItemsLogua
                   title={urbanStoreItem.titulo}
                   subtitle={urbanStoreItem.subitem}
                   path="/urbanstore"
                 />
                 <ItemsLogua title={"Home"} path="/" isHome />
-                <ItemsLogua
-                  title={tecnoLoguaItem.titulo}
-                  subtitle={tecnoLoguaItem.subitem}
-                  path="/tecnologua"
-                />
-                <ItemsLogua
-                  title={servicesItem.titulo}
-                  subtitle={servicesItem.subitem}
-                  path="/services"
-                />
               </Box>
               {children}
             </Box>

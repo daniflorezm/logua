@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Menu, MenuItem, Typography, Button } from "@mui/material";
+import { Typography, Button, Box, Fade } from "@mui/material";
 
 export const ItemsLogua = ({
   title,
@@ -13,71 +13,65 @@ export const ItemsLogua = ({
   path: string;
   isHome?: boolean;
 }) => {
+  const [hover, setHover] = useState(false);
   const router = useRouter();
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const handleOpenMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleHomePageRedirection = () => {
     if (isHome) {
-      console.log(path);
-
       router.push(`${path}`);
     }
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleCloseMenu = () => {
-    setAnchorEl(null);
   };
 
   return (
-    <>
-      <Button
-        onClick={handleOpenMenu}
-        sx={{ ":hover": { backgroundColor: "#b22222" } }}
-      >
-        <Typography
-          sx={{
-            cursor: "pointer",
-            transition: "all 0.3s ease",
-            "&:hover": {
-              color: "#1e1e1e",
-              backgroundColor: "#b22222",
-              padding: "4px 8px",
-              borderRadius: "4px",
-            },
-          }}
-        >
-          {title}
-        </Typography>
-      </Button>
+    <Box
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      sx={{ display: "flex", flexDirection: "column", position: "relative" }}
+    >
+      <Box>
+        <Button onClick={handleHomePageRedirection}>
+          <Typography
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                color: "#1e1e1e",
+              },
+            }}
+          >
+            {title}
+          </Typography>
+        </Button>
+      </Box>
       {subtitle && subtitle.length > 0 && (
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleCloseMenu}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-        >
-          {subtitle?.map((item, index) => (
-            <MenuItem
-              key={index}
-              onClick={() => {
-                router.push(`${path}`);
-                handleCloseMenu();
-              }}
-            >
-              {item}
-            </MenuItem>
-          ))}
-        </Menu>
+        <Fade in={hover} timeout={200} unmountOnExit>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              position: "absolute",
+              top: "100%",
+              left: 0,
+              backgroundColor: "#b22222",
+              zIndex: 10,
+              padding: 1,
+              borderRadius: 1,
+              maxWidth: "100vw",
+              boxSizing: "border-box",
+            }}
+          >
+            {subtitle?.map((item, index) => (
+              <Button
+                key={index}
+                onClick={() => router.push(`${path}`)}
+                sx={{ color: "white" }}
+                fullWidth
+              >
+                <Typography>{item}</Typography>
+              </Button>
+            ))}
+          </Box>
+        </Fade>
       )}
-    </>
+    </Box>
   );
 };
