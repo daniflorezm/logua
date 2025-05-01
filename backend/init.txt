@@ -1,0 +1,4 @@
+Activar entorno virtual: PS C:\Users\Daniel Flórez\Desktop\Proyectos\Logua\logua-django> .\venv\Scripts\Activate 
+Correr backend: (venv) PS C:\Users\Daniel Flórez\Desktop\Proyectos\Logua\logua-django\logua-django> python manage.py runserver
+Crear migración (una vez creada la app): py manage.py makemigrations [nombre de la migración]
+Migración: py manage.py migrate
