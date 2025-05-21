@@ -1,0 +1,22 @@
+.headerdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.headerbutton{
+    cursor: pointer;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    user-select: none;
+}
+.headerbutton:hover{
+    color: rgb(241, 196, 196);
+    border-bottom: 3px solid rgb(78, 0, 0);
+    transition: linear 0.2s;
+    
+}
+@media(max-width: 600px){
+
+}

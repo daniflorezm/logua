@@ -1,8 +1,3 @@
-//Puede acabarse borrando
-export interface SectionItem {
-  titulo: string;
-  subitem?: string[];
-}
 export type Oferta = {
   oferta: string;
   seccion: string;

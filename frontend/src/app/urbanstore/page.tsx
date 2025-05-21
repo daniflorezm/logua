@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { Box } from "@mui/material";
-import { ProductList } from "@/components/Products/ProductList";
+import { ProductList } from "@/components/ProductsList/ProductList";
 import { useUrbanStore } from "../../hooks/useUrbanStore";
 import { useStore } from "../../store/useStore";
 

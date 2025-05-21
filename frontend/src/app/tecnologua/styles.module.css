@@ -1,0 +1,408 @@
+
+.maintecnologua{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.tecnologuaheader{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.tecnologuaheader video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0;
+}  
+.tecnologuaheader h1{
+    position: relative;
+    z-index: 1; 
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+.tecnologuaheader h2{
+    position: relative;
+    z-index: 1; 
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    border-color: rgb(231, 55, 55);
+    backdrop-filter: blur(40px);
+}
+.tecnologuaheader h2:hover{
+    background-color: black;
+}
+.tecnologuabody{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 5% 10%;
+    background-image: linear-gradient(to bottom, #1d1b1b, #bea8a8);
+    user-select: none;
+}
+.tecnologuabodytext{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.tecnologuabody h1{
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.tecnologuabody p{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.tecnologuabodyicon{
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+.tecnologuabodyimg{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+.tecnologuaservicessection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #bea8a8, #1d1b1b);
+    padding: 2em 0em 10em;
+}
+.tecnologuaservicestitle{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+    padding: 5rem;
+}
+.tecnologuaservices{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 10rem 10rem 10rem 10rem;
+    grid-template-areas:
+    "a b"
+    "c d"
+    "e f"
+    "g h";
+    grid-gap: 2rem;
+    overflow: hidden;
+}
+.tecnologuaservicesimg{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 80%;
+    padding: 1rem;
+    background-color: #bea8a8;
+}
+.tecnologuaservicesitemone{
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+    padding: 3rem;
+    grid-area: a;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-image: linear-gradient(to bottom, #521313, #221d1d);
+    
+}
+.tecnologuaservicesitemone h1{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    user-select: none;
+}
+
+.tecnologuaservicesitemtwo{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    margin-right: 30px;
+    padding: 3rem;
+    grid-area: d;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-image: linear-gradient(to bottom, #521313, #221d1d);
+}
+.tecnologuaservicesitemtwo h1{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 20px;
+    user-select: none;
+}
+.tecnologuaservicesitemthree{
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 3rem;
+    grid-area: e;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #521313, #221d1d);
+}
+.tecnologuaservicesitemthree h1{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    user-select: none;
+}
+.tecnologuaservicesitemfour{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    margin-right: 30px;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 3rem;
+    grid-area: h;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #521313, #221d1d);
+}
+.tecnologuaservicesitemfour h1{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 20px;
+    user-select: none;
+}
+.tecnologuafooter{
+    display: flex;
+    width: 100%;
+    padding: 5% 0%;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #1d1b1b, #2b2626);
+}
+.tecnologuafootervideo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+}
+.tecnologuafootervideo video{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.tecnologuafootertext{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2% 2% ;
+}
+.tecnologuafootertext h1{
+   color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0.5rem;
+    user-select: none;
+}
+.tecnologuafootertext p{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    user-select: none;
+}
+.tecnologuafootertext ul{
+    font-size: 2rem;
+    color: rgb(248, 248, 248);
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 2rem;
+}
+.tecnologuafootertextimg{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.tecnologuafootertextimg img{
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+@media(min-width: 1600px){
+    .tecnologuabody{
+    padding: 10% 20%;
+}
+.tecnologuaservices{
+    grid-template-rows: 12rem 12rem 12rem 12rem;
+}
+.tecnologuaservicesitemone{
+    margin-left: 200px;
+}
+.tecnologuaservicesitemone h1{
+    font-size: 3rem;
+}
+.tecnologuaservicesitemtwo{
+    margin-right: 200px;
+}
+.tecnologuaservicesitemtwo h1{
+    font-size: 3rem;
+}
+.tecnologuaservicesitemthree{
+    margin-left: 200px;
+}
+.tecnologuaservicesitemthree h1{
+    font-size: 3rem;
+}
+.tecnologuaservicesitemfour{
+    margin-right: 200px;
+}
+.tecnologuaservicesitemfour h1{
+    font-size: 3rem;
+}
+.tecnologuafootertext{
+    padding: 2% 5% ;
+}
+.tecnologuafootertext h1{
+    font-size: 3.5rem;
+}
+.tecnologuafootertext p{
+    font-size: 2.5rem;
+}
+.tecnologuafootertext ul{
+    font-size: 2rem;
+    line-height: 1.5; 
+    word-break: unset;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+}
+@media (max-width: 600px) {
+    .tecnologuabody{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    }
+    .tecnologuabodytext{
+    width: 100%;
+    }
+    .tecnologuabodyicon{
+    margin-top: 10px;
+    padding-bottom: 2rem;
+    width: 30px;
+    height: 30px;
+    }
+    .tecnologuabodyimg{
+    width: 100%;
+    }
+    .tecnologuaservices{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    }
+    .tecnologuaservicesimg{
+    width: 50px;
+    height: 50px;
+}
+    .tecnologuaservicesitemone{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2rem;
+}
+    .tecnologuaservicesitemone h1{
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+    .tecnologuaservicesitemtwo{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2rem;
+}
+    .tecnologuaservicesitemtwo h1{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+    .tecnologuaservicesitemthree{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2rem;
+}
+    .tecnologuaservicesitemthree h1{
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+    .tecnologuaservicesitemfour{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2rem;
+}
+    .tecnologuaservicesitemfour h1{
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+    .tecnologuafooter{
+        display: flex;
+        flex-direction: column;
+    }
+    .tecnologuafootervideo{
+    width: 100%;
+}
+    .tecnologuafootervideo video{
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    border: 0px;
+    border-radius: 0px;
+}
+.tecnologuafootertext{
+    width: 100%;
+    padding-top: 3rem;
+}
+.tecnologuafootertext h1{
+    text-align: start;
+    font-size: 2.25rem;
+    margin-left: 10px;
+}
+.tecnologuafootertext p{
+    text-align: start;
+    font-size: 2rem;
+    margin-left: 10px;
+    word-break: break-word;
+}
+.tecnologuafootertext ul{
+    font-size: 1.4rem;
+    line-height: 1.6; 
+    word-break: unset;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 0;
+}
+}
+  
